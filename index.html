@@ -14,7 +14,7 @@
   <style>
     :root {
       --brand-delay-ms: 40000;
-      --brand-white: rgba(255, 255, 255, 0.94);
+      --brand-white: rgba(204, 207, 211, 0.72);
       --navy-veil: rgba(3, 12, 28, 0.24);
       --navy-deep: #030c1c;
     }
@@ -72,16 +72,20 @@
     }
 
     .brand-wrap {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 2200ms ease, transform 2200ms ease;
-      pointer-events: none;
-    }
+      .brand-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 31vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  pointer-events: none;
+}
 
     .brand-wrap.is-visible {
       opacity: 1;
@@ -101,7 +105,7 @@
       letter-spacing: -0.047em;
       text-rendering: geometricPrecision;
       -webkit-font-smoothing: antialiased;
-      text-shadow: 0 1px 12px rgba(2, 7, 18, 0.24);
+      text-shadow: none;
       white-space: nowrap;
     }
 
@@ -172,7 +176,7 @@
     (function () {
       const video = document.querySelector("[data-hero-video]");
       const brand = document.querySelector("[data-brand]");
-      const delayMs = 40000;
+      const delayMs = 0;
       let revealTimer = null;
 
       function revealBrand() {
